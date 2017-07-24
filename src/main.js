@@ -63,7 +63,7 @@ export default class WebpackCssConcatPlugin {
 
       const css = new ConcatSource();
 
-      _.each(_.flatten(cssAssets, this.sources), module => {
+      _.each(_.flatten([cssAssets, this.sources]), module => {
         css.add(module);
       });
 
